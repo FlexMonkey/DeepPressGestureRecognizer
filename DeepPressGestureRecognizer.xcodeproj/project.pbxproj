@@ -12,6 +12,7 @@
 		05D277371BBFABA9000AA18F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D277351BBFABA9000AA18F /* Main.storyboard */; };
 		05D277391BBFABA9000AA18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D277381BBFABA9000AA18F /* Assets.xcassets */; };
 		05D2773C1BBFABA9000AA18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D2773A1BBFABA9000AA18F /* LaunchScreen.storyboard */; };
+		05D277461BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D277451BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		05D277381BBFABA9000AA18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05D2773B1BBFABA9000AA18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05D2773D1BBFABAA000AA18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D277441BBFAE6A000AA18F /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Header.h; path = deepPressGestureRecognizer/Header.h; sourceTree = "<group>"; };
+		05D277451BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeepPressGestureRecognizer.swift; path = deepPressGestureRecognizer/DeepPressGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 		05D277301BBFABA9000AA18F /* DeepPressGestureRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				05D277431BBFAE3A000AA18F /* deepPressGestureRecognizer */,
 				05D277311BBFABA9000AA18F /* AppDelegate.swift */,
 				05D277331BBFABA9000AA18F /* ViewController.swift */,
 				05D277351BBFABA9000AA18F /* Main.storyboard */,
@@ -62,6 +66,15 @@
 				05D2773D1BBFABAA000AA18F /* Info.plist */,
 			);
 			path = DeepPressGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		05D277431BBFAE3A000AA18F /* deepPressGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				05D277441BBFAE6A000AA18F /* Header.h */,
+				05D277451BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift */,
+			);
+			name = deepPressGestureRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D277461BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift in Sources */,
 				05D277341BBFABA9000AA18F /* ViewController.swift in Sources */,
 				05D277321BBFABA9000AA18F /* AppDelegate.swift in Sources */,
 			);
@@ -252,6 +266,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.flexmonkey.DeepPressGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./DeepPressGestureRecognizer/deepPressGestureRecognizer/Header.h;
 			};
 			name = Debug;
 		};
@@ -263,6 +278,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.flexmonkey.DeepPressGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./DeepPressGestureRecognizer/deepPressGestureRecognizer/Header.h;
 			};
 			name = Release;
 		};
