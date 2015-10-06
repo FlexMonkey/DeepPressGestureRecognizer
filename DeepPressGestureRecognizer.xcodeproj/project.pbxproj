@@ -23,7 +23,6 @@
 		05D277381BBFABA9000AA18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05D2773B1BBFABA9000AA18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05D2773D1BBFABAA000AA18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05D277441BBFAE6A000AA18F /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Header.h; path = deepPressGestureRecognizer/Header.h; sourceTree = "<group>"; };
 		05D277451BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeepPressGestureRecognizer.swift; path = deepPressGestureRecognizer/DeepPressGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +70,6 @@
 		05D277431BBFAE3A000AA18F /* deepPressGestureRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				05D277441BBFAE6A000AA18F /* Header.h */,
 				05D277451BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift */,
 			);
 			name = deepPressGestureRecognizer;
@@ -266,7 +264,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.flexmonkey.DeepPressGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = ./DeepPressGestureRecognizer/deepPressGestureRecognizer/Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -278,7 +276,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.flexmonkey.DeepPressGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = ./DeepPressGestureRecognizer/deepPressGestureRecognizer/Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -301,6 +299,7 @@
 				05D277421BBFABAA000AA18F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,9 +5,10 @@
 //  Created by SIMON_NON_ADMIN on 03/10/2015.
 //  Copyright © 2015 Simon Gladman. All rights reserved.
 //
-//  Don't forget the bridging header!
+//  Thanks to Alaric Cole - bridging header replaced by proper import :)
 
 import AudioToolbox
+import UIKit.UIGestureRecognizerSubclass
 
 // MARK: GestureRecognizer
 
