@@ -14,15 +14,16 @@ import UIKit.UIGestureRecognizerSubclass
 
 class DeepPressGestureRecognizer: UIGestureRecognizer
 {
-    var vibrateOnDeepPress = false
+	var vibrateOnDeepPress: Bool
     let threshold: CGFloat
     
     private let pulse = PulseLayer()
     private var deepPressed: Bool = false
     
-    required init(target: AnyObject?, action: Selector, threshold: CGFloat)
+	required init(target: AnyObject?, action: Selector, threshold: CGFloat = 0.75, vibrateOnDeepPress: Bool = false)
     {
         self.threshold = threshold
+		self.vibrateOnDeepPress = vibrateOnDeepPress
         
         super.init(target: target, action: action)
     }
