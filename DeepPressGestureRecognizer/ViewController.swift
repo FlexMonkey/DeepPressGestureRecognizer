@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     let stackView = UIStackView()
     
-    let button = UIButton(type: UIButtonType.System)
-    let deepPressableButton = DeepPressableButton(type: UIButtonType.System)
+    let button = UIButton(type: UIButtonType.system)
+    let deepPressableButton = DeepPressableButton(type: UIButtonType.system)
     let slider = DeepPressableSlider()
     let stepper = UIStepper()
     
@@ -25,50 +25,50 @@ class ViewController: UIViewController {
    
         // ----
         
-        button.setTitle("Button with Gesture Recognizer", forState: UIControlState.Normal)
+        button.setTitle("Button with Gesture Recognizer", for: UIControlState())
 
         stackView.addArrangedSubview(button)
         
-        let deepPressGestureRecognizer = DeepPressGestureRecognizer(target: self, action: "deepPressHandler:", threshold: 0.75)
+        let deepPressGestureRecognizer = DeepPressGestureRecognizer(target: self, action: #selector(ViewController.deepPressHandler(_:)), threshold: 0.75)
         
         button.addGestureRecognizer(deepPressGestureRecognizer)
 
         // ----
         
-        deepPressableButton.setTitle("DeepPressableButton", forState: UIControlState.Normal)
+        deepPressableButton.setTitle("DeepPressableButton", for: UIControlState())
   
         stackView.addArrangedSubview(deepPressableButton)
 
-        deepPressableButton.setDeepPressAction(self, action: "deepPressHandler:")
+		deepPressableButton.setDeepPressAction(target: self, action: #selector(ViewController.deepPressHandler(_:)))
         
         stackView.addArrangedSubview(button)
     
         // ----
         
-        slider.setDeepPressAction(self, action: "deepPressHandler:")
+		slider.setDeepPressAction(target: self, action: #selector(ViewController.deepPressHandler(_:)))
 
-        slider.addTarget(self, action: "sliderChange", forControlEvents: UIControlEvents.ValueChanged)
+        slider.addTarget(self, action: #selector(ViewController.sliderChange), for: UIControlEvents.valueChanged)
         
         stackView.addArrangedSubview(slider)
         
         // ----
         
-        let deepPressGestureRecognizer_2 = DeepPressGestureRecognizer(target: self, action: "deepPressHandler:", threshold: 0.75)
+        let deepPressGestureRecognizer_2 = DeepPressGestureRecognizer(target: self, action: #selector(ViewController.deepPressHandler(_:)), threshold: 0.75)
         
         stepper.addGestureRecognizer(deepPressGestureRecognizer_2)
-        stepper.addTarget(self, action: "stepperChange", forControlEvents: UIControlEvents.ValueChanged)
+        stepper.addTarget(self, action: #selector(ViewController.stepperChange), for: UIControlEvents.valueChanged)
         
         stackView.addArrangedSubview(stepper)
         
     }
 
-    func deepPressHandler(value: DeepPressGestureRecognizer)
+    func deepPressHandler(_ value: DeepPressGestureRecognizer)
     {
-        if value.state == UIGestureRecognizerState.Began
+        if value.state == .began
         {
             print("deep press begin: ", value.view?.description)
         }
-        else if value.state == UIGestureRecognizerState.Ended
+        else if value.state == .ended
         {
             print("deep press ends.")
         }
@@ -86,9 +86,9 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews()
     {
-        stackView.axis = UILayoutConstraintAxis.Vertical
-        stackView.distribution = UIStackViewDistribution.EqualSpacing
-        stackView.alignment = UIStackViewAlignment.Center
+        stackView.axis = UILayoutConstraintAxis.vertical
+        stackView.distribution = UIStackViewDistribution.equalSpacing
+        stackView.alignment = UIStackViewAlignment.center
         
         stackView.frame = CGRect(x: 0,
             y: topLayoutGuide.length,
