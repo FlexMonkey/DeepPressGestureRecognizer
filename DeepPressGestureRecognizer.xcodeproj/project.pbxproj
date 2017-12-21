@@ -12,7 +12,7 @@
 		05D277371BBFABA9000AA18F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D277351BBFABA9000AA18F /* Main.storyboard */; };
 		05D277391BBFABA9000AA18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D277381BBFABA9000AA18F /* Assets.xcassets */; };
 		05D2773C1BBFABA9000AA18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D2773A1BBFABA9000AA18F /* LaunchScreen.storyboard */; };
-		05D277461BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D277451BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift */; settings = {ASSET_TAGS = (); }; };
+		05D277461BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D277451BBFBDCB000AA18F /* DeepPressGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +265,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.flexmonkey.DeepPressGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -277,6 +278,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.flexmonkey.DeepPressGestureRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
